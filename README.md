@@ -7,4 +7,7 @@ somar.html
 calculadora.html
 
 
-<li>Insira dois números via input tipo number, chame a função e o resultado pelo button. Caso a função seja "Multiplicar", a ferramenta executará a função e exibirá o resultado. Caso a função seja "Dividir", a ferramenta executará a função e exibirá o resultado.</li>
+<li>Insira dois números via input tipo number, chame a função e o resultado pelo button. Caso a função seja "Multiplicar", a ferramenta executará a função e exibirá o resultado. Caso a função seja "Dividir", a ferramenta executará a função e exibirá o resultado.</li></br></br>
+
+
+
