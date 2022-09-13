@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+<title>
+    Título da Página Olá!
+</title>
+</head>
+<body >
+    <center>
+        <h1>Aluno:</h1>
+       <input id="nome">
+       <h1>Nota 1º Bimestre</h1>
+       <input id="n1" type="number">
+       <h1>Nota 2º Bimestre</h1>
+       <input id="n2" >
+       <h1>Nota 3º Bimestre</h1>
+       <input id="n3" >
+       <h1>Nota 4º Bimestre</h1>
+       <input id="n4" ><br><br>
+       <button onclick="aparecer()">Calcular média e obter status</button><br><br>
+       <span id="bot">Resultado vai aparecer aqui.</span>
+    </center>
+       <script>
+        var nome = document.querySelector('#nome')
+        var n1 = document.querySelector('#n1')
+        var n2 = document.querySelector('#n2')
+        var n3 = document.querySelector('#n3')
+        var n4 = document.querySelector('#n4')
+        var resultado = document.querySelector('#bot')
+        function aparecer(){
+        media = (parseInt(n1.value) + parseInt(n2.value) + 
+      parseInt(n3.value) + parseInt(n4.value)) / 4 
+      if(media<6){
+        resultado.innerHTML ="O Resultado Reprovado " + media
+            } 
+      else{
+          resultado.innerHTML ="O Resultado Aprovado " + media
+            }
+                            }       
+        </script>
+</body>
+</html>
