@@ -1,5 +1,5 @@
 # somar em javascript
-soma.index
+soma.html
 
 
 <li>Calcule as médias informando as notas em cada bimestre.</li>
