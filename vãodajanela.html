@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+<title>
+    Título da Página Olá!
+</title>
+</head>
+<h1>Calcule o vão da janela:</h1></br>
+<h2>Informe as dimensões da janela:</h2>
+<h5>Largura (em metros):</h5>
+<input id="n1" type="number" style="width: 90px;" min="1" step="1">
+<h5>Altura (em metros):</h5>
+<input id="n2" type="number" style="width: 90px;" min="1" step="1"></br></br>
+<button onclick="aparecer()">Calcular o vão e obter análise da medida</button><br><br>
+<span id="bot">Resultado vai aparecer aqui.</span>
+
+<script>
+    var n1 = document.querySelector('#n1')
+    var n2 = document.querySelector('#n2')
+    var resultado = document.querySelector('#bot')
+    function aparecer(){
+    var resultado1 = (parseFloat(n1.value) * parseFloat(n2.value))/ 2
+  if(resultado1>0.9){
+    resultado.innerHTML ="O vão possui medida adequada " + resultado1 + "m²"
+        } 
+  else{
+      resultado.innerHTML ="O vão possui medida inadequada " + resultado1 + "m²"
+        }
+                        }       
+    </script>
+</html>
