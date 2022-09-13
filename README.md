@@ -1,5 +1,5 @@
-# somar em javascript
-soma.html
+# Somar em javascript
+somar.html
 
 
-<li>Calcule as médias informando as notas em cada bimestre.</li>
+<li>Insera quatro notas via input, chame o resulto pelo button e o resultado será os quatro números inseridos divididos por 4.</li>
