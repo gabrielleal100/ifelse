@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+<title>
+    Equação 2² grau
+</title>
+</head>
+
+<body>
+<main class="main">
+    <section class="calc-bhaskara">
+      <h1>Fórmula do 2 Grau</h1>
+      <form class="form" id="form">
+        <label>
+          Digite o valor de a:
+          <input name="a" id="a" placeholder="a" type="number" />
+        </label></br>
+        <label>
+            Digite o valor de b:
+          <input name="b" id="b" placeholder="b" type="number" />
+        </label></br>
+        <label>
+            Digite o valor de c:
+          <input name="c" id="c" placeholder="c" type="number" />
+        </label>
+        <div class="result"></br>
+          <label>
+            x1
+            <input disabled="disabled" name="x1" id="x1" />
+          </label>
+          <label>
+            x2
+            <input disabled="disabled" name="x2" id="x2" />
+          </label>
+        </div>
+        <button>Calcular</button>
+      </form></br>
+      <span id="status">Caso não seja possível realizar o cálculo das raízes, você será notificado aqui.</span>
+    </section>
+  </main>
+  <script>
+var $form = document.querySelector("form");
+var $a = document.querySelector("#a");
+var $b = document.querySelector("#b");
+var $c = document.querySelector("#c");
+var $x1 = document.querySelector("#x1");
+var $x2 = document.querySelector("#x2");
+var notificação = document.querySelector('#status')
+
+function bhaskara() {
+  var a = $a.value;
+  var b = $b.value;
+  var c = $c.value;
+
+  var delta = b * b - 4 * a * c;
+  if(Math.sqrt(delta)>0){
+    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+    $x1.value = x1;
+    $x2.value = x2;
+  } else {
+    notificação.innerHTML ="O delta não possui raíz real "
+  }
+  
+}
+
+$form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  bhaskara();
+});
+  </script>
+</body>
